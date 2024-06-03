@@ -16,7 +16,7 @@ part 'self_label.g.dart';
 @freezed
 class SelfLabel with _$SelfLabel {
   const factory SelfLabel({
-    @typeKey @Default(comAtprotoLabelDefsSelfLabel) String type,
+    @typeKey @Default(comAtprotoLabelDefsSelfLabel) String? type,
 
     /// The short string name of the value or type of this label.
     @JsonKey(name: 'val') required String value,

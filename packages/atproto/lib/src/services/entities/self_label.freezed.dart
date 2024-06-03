@@ -21,7 +21,7 @@ SelfLabel _$SelfLabelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SelfLabel {
   @typeKey
-  String get type => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
 
   /// The short string name of the value or type of this label.
   @JsonKey(name: 'val')
@@ -38,7 +38,7 @@ abstract class $SelfLabelCopyWith<$Res> {
   factory $SelfLabelCopyWith(SelfLabel value, $Res Function(SelfLabel) then) =
       _$SelfLabelCopyWithImpl<$Res, SelfLabel>;
   @useResult
-  $Res call({@typeKey String type, @JsonKey(name: 'val') String value});
+  $Res call({@typeKey String? type, @JsonKey(name: 'val') String value});
 }
 
 /// @nodoc
@@ -54,14 +54,14 @@ class _$SelfLabelCopyWithImpl<$Res, $Val extends SelfLabel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? type = freezed,
     Object? value = null,
   }) {
     return _then(_value.copyWith(
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -78,7 +78,7 @@ abstract class _$$SelfLabelImplCopyWith<$Res>
       __$$SelfLabelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@typeKey String type, @JsonKey(name: 'val') String value});
+  $Res call({@typeKey String? type, @JsonKey(name: 'val') String value});
 }
 
 /// @nodoc
@@ -92,14 +92,14 @@ class __$$SelfLabelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? type = null,
+    Object? type = freezed,
     Object? value = null,
   }) {
     return _then(_$SelfLabelImpl(
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -120,7 +120,7 @@ class _$SelfLabelImpl implements _SelfLabel {
 
   @override
   @typeKey
-  final String type;
+  final String? type;
 
   /// The short string name of the value or type of this label.
   @override
@@ -161,7 +161,7 @@ class _$SelfLabelImpl implements _SelfLabel {
 
 abstract class _SelfLabel implements SelfLabel {
   const factory _SelfLabel(
-      {@typeKey final String type,
+      {@typeKey final String? type,
       @JsonKey(name: 'val') required final String value}) = _$SelfLabelImpl;
 
   factory _SelfLabel.fromJson(Map<String, dynamic> json) =
@@ -169,7 +169,7 @@ abstract class _SelfLabel implements SelfLabel {
 
   @override
   @typeKey
-  String get type;
+  String? get type;
   @override
 
   /// The short string name of the value or type of this label.
